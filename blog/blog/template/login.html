@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block title %} login {% endblock title %}
+{% block body %} 
+
+<table>
+   <thead>
+        <tr>
+
+           
+            <th>Correo</th>
+            <th>contra</th>
+            
+        </tr>
+    </thead>
+    <body>
+        
+        {% for login in logins %}
+        <tr>
+
+     
+            <td>{{ login.correo }}</td>
+            <td>{{ login.contra }}</td>
+            
+            </td>
+        
+        </tr>
+       
+        {% endfor %}
+    </body>
+</table>
+{% endblock body %}

@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+{% block title %} registro {% endblock title %}
+{% block body %} 
+<table>
+   
+   
+  
+   <thead>
+        <tr>
+
+            <th>Nombre Completo</th>
+            <th>Correo</th>
+            <th>contra</th>
+            
+        </tr>
+    </thead>
+    <body>
+        <a href="{% url 'create_login' %}">iniciar</a>
+        {% for registro in registros %}
+        <tr>
+
+            <td>{{ registro.nombre }}</td>
+            <td>{{ registro.correo }}</td>
+            <td>{{ registro.contra }}</td>
+            
+            </td>
+        
+        </tr>
+       
+        {% endfor %}
+    </body>
+</table>
+
+
+
+
+
+
+
+
+
+
+{% endblock body %}
